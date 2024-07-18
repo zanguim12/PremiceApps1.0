@@ -1,11 +1,10 @@
-import { Component } from '@angular/core';
-import { MenuService } from './services/menu.service';
-import packageJson from '../../../../../package.json'
 import { NgClass, NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
-import { AngularSvgIconModule } from 'angular-svg-icon';
+import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { AngularSvgIconModule } from 'angular-svg-icon';
+import packageJson from '../../../../../package.json';
+import { MenuService } from './services/menu.service';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 @Component({
   selector: 'app-side-bar',
   standalone: true,
@@ -29,6 +28,7 @@ export class SideBarComponent {
   ngOnInit(): void {}
 
   public toggleSidebar() {
+    console.log("hello");
     this.menuService.toggleSidebar();
   }
 }
