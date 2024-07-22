@@ -10,6 +10,7 @@ import { routes } from './app.routes';
 
 import * as path from 'path';
 import * as url from 'url';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 const join = path.join;
 const resolve = path.resolve;
 const parseUrl = url.parse;
@@ -95,6 +96,6 @@ export const appConfig: ApplicationConfig = {
       provide: SvgLoader,
       useFactory: svgLoaderFactory,
       deps: [HttpClient, TransferState]
-    }
+    }, provideAnimationsAsync()
   ]
 };

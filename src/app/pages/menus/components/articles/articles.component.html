@@ -1,0 +1,45 @@
+
+<div class="p-4 bg-white rounded-xl shadow-md space-y-4">
+  <p-panel header="Articles">
+    <p-card>
+      <label for="dropdown" class="block text-sm font-medium text-gray-700">Famille Articles</label>
+      <div class="flex flex-col space-y-4">
+          <div>
+            <select id="dropdown" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 bg-white focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+              <option value="option0">Selectione un article</option>
+              <option value="option1">Option 1</option>
+              <option value="option2">Option 2</option>
+              <option value="option3">Option 3</option>
+            </select>
+          </div>
+        </div>
+
+      <p class="text-gray-700 font-bold">
+        saisi le code ou le code à barres ou la désignation ou le stock pour voir la liste des articles correspondants
+      </p>
+      <div class="card flex ">
+        <input type="text" class="border border-gray-300 rounded-md p-2 w-full" pInputText [(ngModel)]="value" />
+    </div>
+    </p-card>
+    <div>
+      <p-table [value]="articles" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Quantity</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+          <tr *ngFor="let article of articles">
+            <td>{{ article.code }}</td>
+            <td>{{ article.name }}</td>
+            <td>{{ article.category }}</td>
+            <td>{{ article.quantity }}</td>
+          </tr>
+        </ng-template>
+    </p-table>
+    </div>
+  </p-panel>
+</div>

@@ -5,6 +5,7 @@ import { AngularSvgIconModule } from 'angular-svg-icon';
 import packageJson from '../../../../../package.json';
 import { MenuService } from './services/menu.service';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
+import { MenusModule } from '../../../pages/menus/menus.module';
 @Component({
   selector: 'app-side-bar',
   standalone: true,
@@ -15,6 +16,7 @@ import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
     RouterLinkActive,
     NgIf,
     SidebarMenuComponent,
+   // MenusModule
 ],
 
   templateUrl: './side-bar.component.html',
