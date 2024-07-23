@@ -20,6 +20,6 @@ export const routes: Routes = [
   path: 'composantes',
   loadChildren: () => import('./pages/composantes/composantes.module').then(m => m.ComposantesModule) // Charger le module Composantes
 },
-{ path: '**', redirectTo: 'dashbord' }
+{ path: '**', redirectTo: 'menus' }
 
 ];
