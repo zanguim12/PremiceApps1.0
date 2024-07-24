@@ -38,15 +38,11 @@ export class Menu {
       separator: true,
       items: [
         {
-          icon: 'assets/icons/heroicons/outline/gift.svg',
-          label: 'comptabilite',
-          route: '/comptabilite',
+          icon: 'assets/icons/heroicons/outline/users.svg',
+          label: 'service-digital',
+          route: '/service-digital',
           children: [
-            { label: 'Sign up', route: '/auth/sign-up' },
-            { label: 'Sign in', route: '/auth/sign-in' },
-            { label: 'Forgot Password', route: '/auth/forgot-password' },
-            { label: 'New Password', route: '/auth/new-password' },
-            { label: 'Two Steps', route: '/auth/two-steps' },
+            { label: 'inbox', route: '/inbox' },
           ],
         },
         {
@@ -67,20 +63,24 @@ export class Menu {
         },
         {
           icon: 'assets/icons/heroicons/outline/users.svg',
-          label: 'service-digital',
-          route: '/service-digital',
-          children: [
-            { label: 'Sign up', route: '/auth/sign-up' },
-          ],
-        },
-        {
-          icon: 'assets/icons/heroicons/outline/users.svg',
           label: 'sav',
           route: '/sav',
           children: [
             { label: 'Sign up', route: '/auth/sign-up' },
           ],
 
+        },
+        {
+          icon: 'assets/icons/heroicons/outline/gift.svg',
+          label: 'comptabilite',
+          route: '/comptabilite',
+          children: [
+            { label: 'Sign up', route: '/auth/sign-up' },
+            { label: 'Sign in', route: '/auth/sign-in' },
+            { label: 'Forgot Password', route: '/auth/forgot-password' },
+            { label: 'New Password', route: '/auth/new-password' },
+            { label: 'Two Steps', route: '/auth/two-steps' },
+          ],
         },
         {
           icon: 'assets/icons/heroicons/outline/lock-closed.svg',
