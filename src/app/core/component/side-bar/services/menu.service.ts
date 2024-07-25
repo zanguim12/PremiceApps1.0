@@ -57,6 +57,7 @@ export class MenuService implements OnDestroy {
 
   public toggleSidebar() {
     this._showSidebar.set(!this._showSidebar());
+    this._showMobileMenu.set(false); // Ensure mobile menu is closed when toggling sidebar
   }
 
   public toggleMenu(menu: any) {
