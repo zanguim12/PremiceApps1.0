@@ -76,11 +76,10 @@ export class Menu {
           label: 'comptabilite',
           route: '/comptabilite',
           children: [
-            { label: 'Sign up', route: '/auth/sign-up' },
-            { label: 'Sign in', route: '/auth/sign-in' },
-            { label: 'Forgot Password', route: '/auth/forgot-password' },
-            { label: 'New Password', route: '/auth/new-password' },
-            { label: 'Two Steps', route: '/auth/two-steps' },
+            { label: 'vente Employe', route: '/composantes/comptabilite/vente-employe' },
+            { label: 'Achat Client', route: '/composantes/comptabilite/achat-client' },
+            { label: 'Alerte facture', route: '/composantes/comptabilite/alert-facture' },
+            { label: 'Annonces', route: '/composantes/comptabilite/annonce' },
           ],
         },
         {

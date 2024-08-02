@@ -97,37 +97,40 @@
 		</style>
   </head>
   <body>
-    <div class="p-6 bg-background rounded-lg shadow-md">
-    <h2 class="text-xl font-semibold text-primary mb-4">Vente effectué par chaque employé et dettes accordées durant une période donnée</h2>
-<div class="flex items-center mb-4">
-    <label for="employee" class="mr-2 text-muted-foreground">Employé</label>
-    <select id="employee" class="border border-border rounded-md p-2 mr-4">
-        <option value="">Sélectionner un employé</option>
+    <div class="container mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Alerte FActure dette</h1>
+    <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-lg mb-4">Imprimer</button>
+    <table class="min-w-full bg-white dark:bg-card border border-border">
+        <thead>
+            <tr class="bg-zinc-200 dark:bg-zinc-800">
+                <th class="py-2 px-4 border-b border-border">Client</th>
+                <th class="py-2 px-4 border-b border-border">Initiateur</th>
+                <th class="py-2 px-4 border-b border-border">Code Facture</th>
+                <th class="py-2 px-4 border-b border-border">Nom Facture</th>
+                <th class="py-2 px-4 border-b border-border">Dette totale</th>
+                <th class="py-2 px-4 border-b border-border">Dette Soldé</th>
+                <th class="py-2 px-4 border-b border-border">Dette restante</th>
+                <th class="py-2 px-4 border-b border-border">Delais (jours)</th>
+                <th class="py-2 px-4 border-b border-border">Etat</th>
+                <th class="py-2 px-4 border-b border-border">Date de Création</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="hover:bg-zinc-100 dark:hover:bg-zinc-700">
+                <td class="py-2 px-4 border-b border-border">PASSCAM</td>
+                <td class="py-2 px-4 border-b border-border">tchang ngassam</td>
+                <td class="py-2 px-4 border-b border-border">RC-DOC-221BNK4D82F2</td>
+                <td class="py-2 px-4 border-b border-border">RC-DOCUMENT-TRC-220QS39RPVAK-24-12-2022</td>
+                <td class="py-2 px-4 border-b border-border">675 000,0</td>
+                <td class="py-2 px-4 border-b border-border">804 936,5</td>
+                <td class="py-2 px-4 border-b border-border">1,0</td>
+                <td class="py-2 px-4 border-b border-border">45</td>
+                <td class="py-2 px-4 border-b border-border text-pink-600">jr(s) : 542</td>
+                <td class="py-2 px-4 border-b border-border">24-12-2022 11:43:51</td>
+            </tr>
 
-    </select>
-
-    <input type="date" class="border border-border rounded-md p-2 mr-2" placeholder="Début" />
-    <input type="date" class="border border-border rounded-md p-2" placeholder="Fin" />
-
-    <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md p-2 ml-2">Voir</button>
-    <button class="bg-destructive text-destructive-foreground hover:bg-destructive/80 rounded-md p-2 ml-2">Imprimer</button>
-</div>
-
-<h3 class="text-lg font-semibold text-primary mt-6">TOTAL CHIFFRE RÉALISÉ PAR CHAQUE COMMERCIAL</h3>
-
-<table class="min-w-full mt-4 border-collapse">
-    <thead>
-        <tr class="bg-muted text-muted-foreground">
-            <th class="border border-border p-2">CLIENT</th>
-            <th class="border border-border p-2">CASH DIRECT</th>
-            <th class="border border-border p-2">DETTE</th>
-            <th class="border border-border p-2">VERSEMENT</th>
-        </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-</table>
+        </tbody>
+    </table>
 </div>
   </body>
 </html>

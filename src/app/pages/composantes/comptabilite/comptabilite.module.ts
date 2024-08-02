@@ -9,6 +9,9 @@ import { ComptabiliteRoutingModule } from './comptabilite-routing.module';
   imports: [
     CommonModule,
     ComptabiliteRoutingModule
+  ],
+  exports:[
+    ComptabiliteRoutingModule
   ]
 })
 export class ComptabiliteModule { }

@@ -97,37 +97,23 @@
 		</style>
   </head>
   <body>
-    <div class="p-6 bg-background rounded-lg shadow-md">
-    <h2 class="text-xl font-semibold text-primary mb-4">Vente effectué par chaque employé et dettes accordées durant une période donnée</h2>
-<div class="flex items-center mb-4">
-    <label for="employee" class="mr-2 text-muted-foreground">Employé</label>
-    <select id="employee" class="border border-border rounded-md p-2 mr-4">
-        <option value="">Sélectionner un employé</option>
-
-    </select>
-
-    <input type="date" class="border border-border rounded-md p-2 mr-2" placeholder="Début" />
-    <input type="date" class="border border-border rounded-md p-2" placeholder="Fin" />
-
-    <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 rounded-md p-2 ml-2">Voir</button>
-    <button class="bg-destructive text-destructive-foreground hover:bg-destructive/80 rounded-md p-2 ml-2">Imprimer</button>
-</div>
-
-<h3 class="text-lg font-semibold text-primary mt-6">TOTAL CHIFFRE RÉALISÉ PAR CHAQUE COMMERCIAL</h3>
-
-<table class="min-w-full mt-4 border-collapse">
-    <thead>
-        <tr class="bg-muted text-muted-foreground">
-            <th class="border border-border p-2">CLIENT</th>
-            <th class="border border-border p-2">CASH DIRECT</th>
-            <th class="border border-border p-2">DETTE</th>
-            <th class="border border-border p-2">VERSEMENT</th>
-        </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-</table>
+    <div class="flex items-center justify-between p-4 bg-card border border-border rounded-lg">
+  <div class="flex items-center space-x-2">
+    <img aria-hidden="true" alt="icon" src="https://openui.fly.dev/openui/24x24.svg?text=📄" />
+    <input
+      type="text"
+      placeholder="Cherche l’expéditeur ou le msg dans..."
+      class="border border-border rounded-lg p-2 focus:outline-none focus:ring focus:ring-ring w-full"
+    />
+    <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-lg">
+      <img aria-hidden="true" alt="search-icon" src="https://openui.fly.dev/openui/24x24.svg?text=🔍" />
+    </button>
+  </div>
+  <div class="text-muted-foreground">
+    1 – 50 of 235
+    <button class="ml-2 text-muted-foreground hover:text-muted-foreground/80">◀</button>
+    <button class="text-muted-foreground hover:text-muted-foreground/80">▶</button>
+  </div>
 </div>
   </body>
 </html>
