@@ -9,6 +9,9 @@ import { SavRoutingModule } from './sav-routing.module';
   imports: [
     CommonModule,
     SavRoutingModule
+  ],
+  exports:[
+    SavRoutingModule
   ]
 })
 export class SavModule { }

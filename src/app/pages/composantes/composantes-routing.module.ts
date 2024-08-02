@@ -1,4 +1,4 @@
-import { ServiceDigitalModule } from './service-digital/service-digital.module';
+
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -13,8 +13,13 @@ const routes: Routes = [
   },
   {
     path: 'sav',
-    loadChildren: () => import('./sav/sav-routing.module').then(m => m.SavRoutingModule) // Charger le module Composantes
-  },{
+    loadChildren: () => import('./sav/sav-routing.module').then(m => m.SavRoutingModule)
+  },
+  {
+    path: 'comptabilite',
+    loadChildren: () => import('./comptabilite/comptabilite-routing.module').then(m => m.ComptabiliteRoutingModule) // Charger le module Composantes
+  },
+  {
     path: 'commerce',
     loadChildren: () => import('./commerce/commerce-routing.module').then(m => m.CommerceRoutingModule) // Charger le module Composantes
   },

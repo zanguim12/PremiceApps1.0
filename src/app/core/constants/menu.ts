@@ -14,7 +14,7 @@ export class Menu {
         {
           icon: 'assets/icons/heroicons/outline/lock-closed.svg',
           label: 'articles',
-          route: '/articles',
+          route: '/menus/articles',
         },
         {
           icon: 'assets/icons/heroicons/outline/shield-exclamation.svg',
@@ -23,11 +23,11 @@ export class Menu {
           children: [
             {
               label: 'new-user',
-              route: '/new-user'
+              route: '/menus/apps/new-user'
              },
             {
                label: 'profil',
-               route: '/profil'
+               route: '/menus/apps/profil'
               },
           ],
         },
@@ -42,7 +42,7 @@ export class Menu {
           label: 'service-digital',
           route: '/service-digital',
           children: [
-            { label: 'inbox', route: '/inbox' },
+            { label: 'inbox', route: '/composantes/service-digital/inbox' },
           ],
         },
         {
@@ -50,15 +50,16 @@ export class Menu {
           label: 'stock',
           route: '/stock',
           children: [
-            { label: 'Sign up', route: '/auth/sign-up' },
-            { label: 'Sign in', route: '/auth/sign-in' },
-            { label: 'Forgot Password', route: '/auth/forgot-password' },
-            { label: 'New Password', route: '/auth/new-password' },
-            { label: 'Two Steps', route: '/auth/two-steps' },
-            { label: 'Sign in', route: '/auth/sign-in' },
-            { label: 'Forgot Password', route: '/auth/forgot-password' },
-            { label: 'New Password', route: '/auth/new-password' },
-            { label: 'Two Steps', route: '/auth/two-steps' },
+            { label: 'famille-produit', route: '/composantes/stock/famille-produit' },
+            { label: 'Fournisseur', route: '/composantes/stock/fournisseur' },
+            { label: 'Articles', route: '/composantes/stock/articles' },
+            { label: 'Depot', route: '/composantes/stock/depot' },
+            { label: 'entre-stock', route: '/composantes/stock/entre-stock' },
+            { label: 'Mouvements Entre/Sortie', route: '/composantes/stock/mouvement-entre-sortie' },
+            { label: 'Transfert Stock', route: '/composantes/stock/transfert-stock' },
+            { label: 'Inventaires', route: '/composantes/stock/inventaire' },
+            { label: 'Alert Stock', route: '/composantes/stock/alert-stock' },
+            { label: 'suivie Article', route: '/composantes/stock/suivi-article'}
           ],
         },
         {
@@ -66,7 +67,7 @@ export class Menu {
           label: 'sav',
           route: '/sav',
           children: [
-            { label: 'Sign up', route: '/auth/sign-up' },
+            { label: 'Maintenace', route: '/composantes/sav/maintenace' },
           ],
 
         },

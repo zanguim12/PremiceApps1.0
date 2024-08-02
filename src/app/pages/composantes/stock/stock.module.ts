@@ -8,7 +8,10 @@ import { StockRoutingModule } from './stock-routing.module';
   declarations: [],
   imports: [
     CommonModule,
-    StockRoutingModule
+    StockRoutingModule,
+  ],
+  exports:[
+    StockRoutingModule,
   ]
 })
 export class StockModule { }

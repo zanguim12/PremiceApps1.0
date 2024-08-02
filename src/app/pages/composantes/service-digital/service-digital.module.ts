@@ -9,6 +9,9 @@ import { ServiceDigitalRoutingModule } from './service-digital-routing.module';
   imports: [
     CommonModule,
     ServiceDigitalRoutingModule
+  ],
+  exports: [
+    ServiceDigitalRoutingModule
   ]
 })
 export class ServiceDigitalModule { }

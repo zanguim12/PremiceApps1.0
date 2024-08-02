@@ -1,46 +1,141 @@
-<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 shadow-md shadow-black border border-b-black p-5">
-
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5">
   <div class="bg-gradient-to-b from-white via-white to-yellow-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-        <i class="fas fa-book"></i>
+      <i class="fas fa-book"></i>
     </div>
-    <div class="">
-        <h6 class="text-gray-600 font-medium">LIFETIME VALUE</h6>
-        <h4 class="text-3xl font-bold text-yellow-800">532</h4>
+    <div>
+      <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOURS -> PREMICE COMPUTER SARL</p>
+      <h4 class="text-3xl font-bold text-yellow-800">XAF 1.909.950,00</h4>
     </div>
   </div>
 
   <div class="bg-gradient-to-b from-white via-white to-blue-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-        <i class="fas fa-book"></i>
+      <i class="fas fa-book"></i>
     </div>
-    <div class="">
-        <h6 class="text-gray-600 font-medium">LIFETIME VALUE</h6>
-        <h4 class="text-3xl font-bold text-yellow-800">532</h4>
+    <div>
+      <p class="text-gray-600 font-medium">VERSEMENT PAR CHEQUE</p>
+      <h4 class="text-3xl font-bold text-yellow-800">XAF 0,00</h4>
     </div>
   </div>
+</div>
 
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-8">
   <div class="bg-gradient-to-b from-white via-white to-red-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-        <i class="fas fa-book"></i>
+      <i class="fas fa-book"></i>
     </div>
     <div class="text-center">
-        <h6 class="text-gray-600 font-medium">LIFETIME VALUE</h6>
-        <h4 class="text-3xl font-bold text-yellow-800">532</h4>
+      <span class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR AGENCE COMPUTER</span>
+      <h4 class="text-3xl font-bold text-yellow-800">XAF 874.000,00</h4>
     </div>
   </div>
 
   <div class="bg-gradient-to-b from-white via-white to-green-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-        <i class="fas fa-book"></i>
+      <i class="fas fa-book"></i>
     </div>
     <div class="text-center">
-        <h6 class="text-gray-600 font-medium">LIFETIME VALUE</h6>
-        <h4 class="text-3xl font-bold text-yellow-800">532</h4>
+      <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR COMPUTER VIP</p>
+      <h4 class="text-3xl font-bold text-yellow-800">XAF 390.000,00</h4>
     </div>
   </div>
 
-  <!-- Repeat similar changes for the remaining divs -->
+  <div class="bg-gradient-to-b from-white via-white to-red-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
+    <div class="text-4xl text-yellow-600 mr-4">
+      <i class="fas fa-book"></i>
+    </div>
+    <div class="text-center">
+      <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR AGENCE INFORMATIQ</p>
+      <h4 class="text-3xl font-bold text-yellow-800">XAF 874.000,00</h4>
+    </div>
+  </div>
 
+  <div class="bg-gradient-to-b from-white via-white to-green-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
+    <div class="text-4xl text-yellow-600 mr-4">
+      <i class="fas fa-book"></i>
+    </div>
+    <div class="text-center">
+      <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR AGENCE DOUALA</p>
+      <h4 class="text-3xl font-bold text-yellow-800">XAF 615.950,00</h4>
+    </div>
+  </div>
 </div>
+
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5">
+  <div class="bg-gradient-to-b from-white via-white to-yellow-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
+    <div class="text-4xl text-yellow-600 mr-4">
+      <i class="fas fa-book"></i>
+    </div>
+    <div>
+      <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR COMPUTER SAV</p>
+      <h4 class="text-3xl font-bold text-yellow-800">XAF 30.000,00</h4>
+    </div>
+  </div>
+
+  <div class="bg-gradient-to-b from-white via-white to-blue-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
+    <div class="text-4xl text-yellow-600 mr-4">
+      <i class="fas fa-book"></i>
+    </div>
+    <div>
+      <h5 class="text-gray-600 font-medium">ANONCE(S)</h5>
+      <!--<h4 class="text-3xl font-bold text-yellow-800">XAF 0,00</h4>-->
+    </div>
+  </div>
+</div>
+
 <canvas id="acquisitionChart"></canvas>
+
+
+<!--<div class="grid grid-cols-1 sm:grid-cols-2">
+
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h5 class="mb-0">Unique Visitor</h5>
+    <div class="d-flex gap-2 chart-income">
+      <div class="chart-income month" (click)="toggleActive('month')">Month</div>
+      <div class="chart-income week" (click)="toggleActive('week')">Week</div>
+    </div>
+  </div>
+
+   <div class="chart-container">
+    <div class="chart-controls">
+      <button class="chart-income week" (click)="toggleActive('week')">This Week</button>
+      <button class="chart-income month" (click)="toggleActive('month')">This Month</button>
+    </div>
+     <div>
+      <ngx-charts-line-chart
+        #chart
+        [series]="chartOptions.series"
+        [chart]="chartOptions.chart"
+        [dataLabels]="chartOptions.dataLabels"
+        [colors]="chartOptions.colors"
+        [stroke]="chartOptions.stroke"
+        [xaxis]="chartOptions.xaxis"
+        [yaxis]="chartOptions.yaxis"
+        [grid]="chartOptions.grid"
+        [theme]="chartOptions.theme"
+      ></ngx-charts-line-chart>
+
+       <button (click)="toggleActive('week')">Week</button>
+      <button (click)="toggleActive('month')">Month</button>
+    </div>
+  </div>
+
+
+   <div class="card">
+    <div class="card-body">
+      <div id="chart">
+        <apx-chart
+          [series]="chartOptions.series"
+          [chart]="chartOptions.chart"
+          [dataLabels]="chartOptions.dataLabels"
+          [xaxis]="chartOptions.xaxis"
+          [colors]="chartOptions.colors"
+          [stroke]="chartOptions.stroke"
+          [yaxis]="chartOptions.yaxis"
+          [grid]="chartOptions.grid"
+          [theme]="chartOptions.theme"
+        ></apx-chart>
+      </div>
+    </div>
+  </div>-->

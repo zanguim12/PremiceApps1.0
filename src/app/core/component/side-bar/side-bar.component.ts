@@ -6,6 +6,8 @@ import packageJson from '../../../../../package.json';
 import { MenuService } from './services/menu.service';
 import { SidebarMenuComponent } from './sidebar-menu/sidebar-menu.component';
 import { MenusModule } from '../../../pages/menus/menus.module';
+import { SidebarModule } from 'primeng/sidebar';
+
 @Component({
   selector: 'app-side-bar',
   standalone: true,
@@ -16,6 +18,7 @@ import { MenusModule } from '../../../pages/menus/menus.module';
     RouterLinkActive,
     NgIf,
     SidebarMenuComponent,
+    SidebarModule,
    // MenusModule
 ],
 
@@ -24,6 +27,7 @@ import { MenusModule } from '../../../pages/menus/menus.module';
 })
 export class SideBarComponent {
   public appJson: any = packageJson;
+  sidebarVisible: boolean = true;
 
   constructor(public menuService: MenuService) {}
 

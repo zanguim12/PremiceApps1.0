@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -9,6 +10,11 @@ import { InboxRoutingModule } from './inbox-routing.module';
   imports: [
     CommonModule,
     InboxRoutingModule
+  ],
+  exports: [
+    InboxRoutingModule
   ]
 })
-export class InboxModule { }
+export class InboxModule {
+
+}

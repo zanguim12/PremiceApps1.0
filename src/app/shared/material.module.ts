@@ -46,7 +46,8 @@ import { FormGroup, FormsModule } from '@angular/forms';
     NgClass,
     NgFor,
     NgIf,
-    FormsModule // Ensure MatSelectModule is exported
+    FormsModule,
+     // Ensure MatSelectModule is exported
   ],
 })
 export class MaterialModule {}
