@@ -9,6 +9,9 @@ import { CommerceRoutingModule } from './commerce-routing.module';
   imports: [
     CommonModule,
     CommerceRoutingModule
+  ],
+  exports:[
+    CommerceRoutingModule,
   ]
 })
 export class CommerceModule { }
