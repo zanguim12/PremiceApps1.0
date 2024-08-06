@@ -2,7 +2,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5">
   <div class="bg-gradient-to-b from-white via-white to-yellow-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div>
       <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOURS -> PREMICE COMPUTER SARL</p>
@@ -12,7 +12,7 @@
 
   <div class="bg-gradient-to-b from-white via-white to-blue-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div>
       <p class="text-gray-600 font-medium">VERSEMENT PAR CHEQUE</p>
@@ -24,7 +24,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 p-8">
   <div class="bg-gradient-to-b from-white via-white to-red-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div class="text-center">
       <span class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR AGENCE COMPUTER</span>
@@ -34,7 +34,7 @@
 
   <div class="bg-gradient-to-b from-white via-white to-green-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div class="text-center">
       <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR COMPUTER VIP</p>
@@ -44,7 +44,7 @@
 
   <div class="bg-gradient-to-b from-white via-white to-red-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div class="text-center">
       <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR AGENCE INFORMATIQ</p>
@@ -54,7 +54,7 @@
 
   <div class="bg-gradient-to-b from-white via-white to-green-400 rounded-lg p-6 shadow-lg flex items-center shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div class="text-center">
       <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR AGENCE DOUALA</p>
@@ -66,7 +66,7 @@
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-5">
   <div class="bg-gradient-to-b from-white via-white to-yellow-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div>
       <p class="text-gray-600 font-medium">CHIFFRE D'AFFAIRE DU JOUR COMPUTER SAV</p>
@@ -76,7 +76,7 @@
 
   <div class="bg-gradient-to-b from-white via-white to-blue-400 rounded-lg p-2 shadow-lg flex shadow-md shadow-black">
     <div class="text-4xl text-yellow-600 mr-4">
-      <i class="fas fa-book"></i>
+      <i class=""></i>
     </div>
     <div>
       <h5 class="text-gray-600 font-medium">ANONCE(S)</h5>
@@ -87,88 +87,63 @@
 
 <canvas id="acquisitionChart"></canvas>
 
-<div class="flex flex-col md:flex-row p-6 bg-background rounded-lg shadow-lg">
-  <div class="w-full md:w-2/3 p-4">
-    <h2 class="text-lg font-semibold">Acquisition Overview</h2>
+<div class=" grid grid-cols-1 sm:grid-cols-2 flex flex-col md:flex-row p-6 bg-background rounded-lg shadow-lg">
+  <p-card>
+  <div class="md:w-1/2 p-4">
+    <span class="text-lg font-semibold text-primary">PRODUITS LES PLUS VENDUS SUR UNE PERIODE</span>
+    <p class="text-muted-foreground">Liste des produits les plus vendus par famille, sur une période ainsi que le chiffre d'affaire et le bénéfice moyen engendré en fonction de la quantité.</p>
     <div class="mt-4">
-      <img aria-hidden="true" alt="acquisition-chart" src="https://openui.fly.dev/openui/600x300.svg?text=Chart" />
-      <div class="flex justify-between mt-2">
-        <span class="text-muted-foreground">M</span>
-        <span class="text-muted-foreground">T</span>
-        <span class="text-muted-foreground">W</span>
-        <span class="text-muted-foreground">T</span>
-        <span class="text-muted-foreground">F</span>
-        <span class="text-muted-foreground">S</span>
-        <span class="text-muted-foreground">S</span>
-      </div>
-      <div class="flex items-center mt-2">
-        <div class="w-4 h-4 border border-primary rounded mr-2"></div>
-        <span class="text-muted-foreground">Organic</span>
-        <div class="w-4 h-4 bg-zinc-300 rounded ml-4 mr-2"></div>
-        <span class="text-muted-foreground">Referral</span>
+      <label class="block text-sm font-medium text-muted-foreground">Agence</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Choisir une agence</option>
+      </select>
+    </div>
+    <div class="mt-4">
+      <label class="block text-sm font-medium text-muted-foreground">PERIODE</label>
+      <div class="flex space-x-2">
+        <input type="date" class="block w-full border border-border rounded-md p-2" placeholder="date debut" />
+        <span class="flex items-center justify-center">...</span>
+        <input type="date" class="block w-full border border-border rounded-md p-2" placeholder="date fin" />
       </div>
     </div>
+    <button class="mt-4 bg-primary text-primary-foreground hover:bg-primary/80 p-2 rounded-md">Voir</button>
   </div>
-  <div class="w-full md:w-1/3 p-4">
-    <h2 class="text-lg font-semibold">Latest Customers</h2>
-    <ul class="mt-4">
-      <li class="flex justify-between py-2">
-        <span class="text-primary">Brooklyn Simmons</span>
-        <span class="text-muted-foreground">Manager at Mitsubishi</span>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-yellow-500">Leslie Alexander</span>
-        <span class="text-muted-foreground">Customer Success at General Electric</span>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-blue-500">Jerome Bell</span>
-        <span class="text-muted-foreground">Mario Carrier at Nintendo</span>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-purple-500">Jim Jones</span>
-        <span class="text-muted-foreground">Reliability Engineer at eBay</span>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-red-500">Annette Black</span>
-        <span class="text-muted-foreground">Delivery Woman at Pizza Hut</span>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-green-500">Albert Flores</span>
-        <span class="text-muted-foreground">Team Leader at Insomniac Games</span>
-      </li>
-    </ul>
-    <button class="mt-4 bg-primary text-primary-foreground p-2 rounded-lg w-full">View All</button>
+</p-card>
+<p-card>
+  <div class="md:w-1/2 p-4 border-l border-border">
+    <span class="text-lg font-semibold text-primary">LES MEILLEURS CLIENTS</span>
+    <p class="text-muted-foreground">Les 5 meilleurs clients</p>
+    <table class="min-w-full mt-4">
+      <thead>
+        <tr class="bg-muted text-muted-foreground">
+          <th class="p-2 text-left">CLIENT</th>
+          <th class="p-2 text-left">PRIX TTC</th>
+          <th class="p-2 text-left">POINTS CUMULES</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="p-2">COLOMBO MARIE</td>
+          <td class="p-2">80 547 000,0</td>
+          <td class="p-2">80,5 => + 80,5 point(s)</td>
+        </tr>
+        <tr>
+          <td class="p-2">MR OBAMA</td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  <div class="w-full md:w-1/3 p-4">
-    <h2 class="text-lg font-semibold">Profile Completion</h2>
-    <div class="flex items-center justify-center mt-4">
-      <div class="relative">
-        <div class="w-24 h-24 rounded-full border-4 border-accent flex items-center justify-center">
-          <span class="text-2xl font-semibold text-primary">70%</span>
-        </div>
-      </div>
-    </div>
-    <ul class="mt-4">
-      <li class="flex justify-between py-2">
-        <span class="text-primary">Add Avatar</span>
-        <i class="fas fa-check text-green-500"></i>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-primary">Add Bio</span>
-        <i class="fas fa-check text-green-500"></i>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-primary">Add Skills</span>
-        <i class="fas fa-check text-green-500"></i>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-primary">Add Experience</span>
-        <i class="fas fa-check text-green-500"></i>
-      </li>
-      <li class="flex justify-between py-2">
-        <span class="text-primary">Add Education</span>
-        <i class="fas fa-check text-green-500"></i>
-      </li>
-    </ul>
+</p-card>
+</div>
+
+<div class="p-6 bg-card rounded-lg shadow-md">
+  <h4 class="text-lg font-semibold text-foreground">TENDANCE DU CA AU COURS DE L'ANNEE</h4>
+  <div class="mt-4">
+    <canvas id="lineChart" class="w-full h-64"></canvas>
+  </div>
+  <div class="mt-4">
+    <span class="inline-block w-3 h-3 bg-accent mr-2"></span>
+    <span class="text-muted-foreground">Courbe de variation du CA sur l'année</span>
   </div>
 </div>
+
