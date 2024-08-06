@@ -1,147 +1,49 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-		<script type="text/javascript">
-			window.tailwind.config = {
-				darkMode: ['class'],
-				theme: {
-					extend: {
-						colors: {
-							border: 'hsl(var(--border))',
-							input: 'hsl(var(--input))',
-							ring: 'hsl(var(--ring))',
-							background: 'hsl(var(--background))',
-							foreground: 'hsl(var(--foreground))',
-							primary: {
-								DEFAULT: 'hsl(var(--primary))',
-								foreground: 'hsl(var(--primary-foreground))'
-							},
-							secondary: {
-								DEFAULT: 'hsl(var(--secondary))',
-								foreground: 'hsl(var(--secondary-foreground))'
-							},
-							destructive: {
-								DEFAULT: 'hsl(var(--destructive))',
-								foreground: 'hsl(var(--destructive-foreground))'
-							},
-							muted: {
-								DEFAULT: 'hsl(var(--muted))',
-								foreground: 'hsl(var(--muted-foreground))'
-							},
-							accent: {
-								DEFAULT: 'hsl(var(--accent))',
-								foreground: 'hsl(var(--accent-foreground))'
-							},
-							popover: {
-								DEFAULT: 'hsl(var(--popover))',
-								foreground: 'hsl(var(--popover-foreground))'
-							},
-							card: {
-								DEFAULT: 'hsl(var(--card))',
-								foreground: 'hsl(var(--card-foreground))'
-							},
-						},
-					}
-				}
-			}
-		</script>
-		<style type="text/tailwindcss">
-			@layer base {
-				:root {
-					--background: 0 0% 100%;
---foreground: 240 10% 3.9%;
---card: 0 0% 100%;
---card-foreground: 240 10% 3.9%;
---popover: 0 0% 100%;
---popover-foreground: 240 10% 3.9%;
---primary: 240 5.9% 10%;
---primary-foreground: 0 0% 98%;
---secondary: 240 4.8% 95.9%;
---secondary-foreground: 240 5.9% 10%;
---muted: 240 4.8% 95.9%;
---muted-foreground: 240 3.8% 46.1%;
---accent: 240 4.8% 95.9%;
---accent-foreground: 240 5.9% 10%;
---destructive: 0 84.2% 60.2%;
---destructive-foreground: 0 0% 98%;
---border: 240 5.9% 90%;
---input: 240 5.9% 90%;
---ring: 240 5.9% 10%;
---radius: 0.5rem;
-				}
-				.dark {
-					--background: 240 10% 3.9%;
---foreground: 0 0% 98%;
---card: 240 10% 3.9%;
---card-foreground: 0 0% 98%;
---popover: 240 10% 3.9%;
---popover-foreground: 0 0% 98%;
---primary: 0 0% 98%;
---primary-foreground: 240 5.9% 10%;
---secondary: 240 3.7% 15.9%;
---secondary-foreground: 0 0% 98%;
---muted: 240 3.7% 15.9%;
---muted-foreground: 240 5% 64.9%;
---accent: 240 3.7% 15.9%;
---accent-foreground: 0 0% 98%;
---destructive: 0 62.8% 30.6%;
---destructive-foreground: 0 0% 98%;
---border: 240 3.7% 15.9%;
---input: 240 3.7% 15.9%;
---ring: 240 4.9% 83.9%;
-				}
-			}
-		</style>
-  </head>
-  <div class="p-6 bg-background text-foreground">
-    <h2 class="text-xl font-bold mb-4">Alert du stock</h2>
-    <div class="mb-6">
-        <h3 class="font-semibold">CRITIQUE DE STOCK</h3>
-        <div class="flex items-center mb-4">
-            <select class="border border-border rounded-md p-2 mr-4">
-                <option>choisi la famille</option>
-            </select>
-            <button class="bg-primary text-primary-foreground rounded-md p-2">Imprimer</button>
-        </div>
-        <table class="min-w-full border-collapse border border-border">
-            <thead>
-                <tr class="bg-muted-foreground">
-                    <th class="border border-border p-2">Référence</th>
-                    <th class="border border-border p-2">Description</th>
-                    <th class="border border-border p-2">Code</th>
-                    <th class="border border-border p-2">Quantité</th>
-                    <th class="border border-border p-2">Total</th>
-                    <th class="border border-border p-2">Type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr class="border border-border">
-                    <td class="border border-border p-2">4549292015669</td>
-                    <td class="border border-border p-2">TONER CANON C-EXV 49 NOIR 8524B002AA</td>
-                    <td class="border border-border p-2">8524B002AA</td>
-                    <td class="border border-border p-2">28</td>
-                    <td class="border border-border p-2">30</td>
-                    <td class="border border-border p-2">2</td>
-                </tr>
-            </tbody>
-        </table>
+<p-card header="Alert du stock">
+<div class="p-6 bg-background text-foreground">
+  <span  class="font-semibold">CRITIQUE DE STOCK</span>
+  <div class="mb-6">
+    <div class="flex items-center mb-4">
+      <select class="border border-border rounded-md p-2 mr-4">
+        <option>choisi la famille</option>
+      </select>
+      <button class="bg-primary text-primary-foreground rounded-md p-2">Imprimer</button>
     </div>
+    <table class="min-w-full border-collapse border border-border">
+      <thead>
+        <tr class="bg-muted-foreground">
+          <th class="border border-border p-2">Référence</th>
+          <th class="border border-border p-2">Description</th>
+          <th class="border border-border p-2">Code</th>
+          <th class="border border-border p-2">Quantité</th>
+          <th class="border border-border p-2">Total</th>
+          <th class="border border-border p-2">Type</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border border-border">
+          <td class="border border-border p-2">4549292015669</td>
+          <td class="border border-border p-2">TONER CANON C-EXV 49 NOIR 8524B002AA</td>
+          <td class="border border-border p-2">8524B002AA</td>
+          <td class="border border-border p-2">28</td>
+          <td class="border border-border p-2">30</td>
+          <td class="border border-border p-2">2</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
-    <div class="mb-6">
-        <h3 class="font-semibold">ARTICLE PERIME</h3>
-        <div class="bg-muted p-4 rounded-md">
-            <p class="text-red-600">l'article ENCRE CANON 446 COULEUR REF 8285B001AA a commencé être périmé il y a <strong>671 jour(s)</strong> quantité total restante: <strong>78</strong></p>
-            <p class="text-red-600">l'article ENCRE CANON 490 CYAN REF 0664C001AA a commencé être périmé il y a <strong>214 jour(s)</strong> quantité total restante: <strong>57</strong></p>
-            <p class="text-red-600">l'article ENCRE CANON 490 YELLOW REF 0686C001AA a commencé être périmé il y a <strong>214 jour(s)</strong> quantité total restante: <strong>74</strong></p>
-            <p class="text-red-600">l'article ENCRE CANON 490 MAGENTA REF 0665C001AA a commencé être périmé il y a <strong>214 jour(s)</strong> quantité total restante: <strong>81</strong></p>
-            <p class="text-red-600">l'article ENCRE HP 305 COULEUR REF 3YM604E UUQ a commencé être périmé il y a <strong>520 jour(s)</strong> quantité total restante: <strong>31</strong></p>
-            <p class="text-red-600">l'article ENCRE HP 305 COULEUR REF 3YM604E UUQ a commencé être périmé il y a <strong>61</strong> jour(s) quantité total restante: <strong>61</strong></p>
-            <p class="text-red-600">l'article ENCRE HP 912XL CYAN REF 3YL184E BGX a commencé être périmé il y a <strong>336 jour(s)</strong> quantité total restante: <strong>10</strong></p>
-            <p class="text-red-600">l'article ENCRE HP 912XL YELLOW REF 3YL184E BGX a commencé être périmé il y a <strong>275 jour(s)</strong> quantité total restante: <strong>10</strong></p>
-        </div>
+  <div class="mb-6">
+    <h3 class="font-semibold">ARTICLE PERIME</h3>
+    <div class="bg-muted p-4 rounded-md">
+      <p class="text-red-600">l'article ENCRE CANON 446 COULEUR REF 8285B001AA a commencé être périmé il y a <strong>671 jour(s)</strong> quantité total restante: <strong>78</strong></p>
+      <p class="text-red-600">l'article ENCRE CANON 490 CYAN REF 0664C001AA a commencé être périmé il y a <strong>214 jour(s)</strong> quantité total restante: <strong>57</strong></p>
+      <p class="text-red-600">l'article ENCRE CANON 490 YELLOW REF 0686C001AA a commencé être périmé il y a <strong>214 jour(s)</strong> quantité total restante: <strong>74</strong></p>
+      <p class="text-red-600">l'article ENCRE CANON 490 MAGENTA REF 0665C001AA a commencé être périmé il y a <strong>214 jour(s)</strong> quantité total restante: <strong>81</strong></p>
+      <p class="text-red-600">l'article ENCRE HP 305 COULEUR REF 3YM604E UUQ a commencé être périmé il y a <strong>520 jour(s)</strong> quantité total restante: <strong>31</strong></p>
+      <p class="text-red-600">l'article ENCRE HP 305 COULEUR REF 3YM604E UUQ a commencé être périmé il y a <strong>61</strong> jour(s) quantité total restante: <strong>61</strong></p>
+      <p class="text-red-600">l'article ENCRE HP 912XL CYAN REF 3YL184E BGX a commencé être périmé il y a <strong>336 jour(s)</strong> quantité total restante: <strong>10</strong></p>
+      <p class="text-red-600">l'article ENCRE HP 912XL YELLOW REF 3YL184E BGX a commencé être périmé il y a <strong>275 jour(s)</strong> quantité total restante: <strong>10</strong></p>
     </div>
+  </div>
 </div>
-</html>
+</p-card>

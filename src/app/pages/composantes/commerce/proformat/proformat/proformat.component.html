@@ -1,1 +1,72 @@
-<p>proformat works!</p>
+<div class="p-6 bg-card rounded-lg shadow-md">
+  <p class="text-lg font-semibold text-foreground">FACTURE PROFORMAT</p>
+  <p class="text-muted-foreground">Utilise les paramètres suivants pour faire un règlement client</p>
+
+  <div class="flex items-center mt-4">
+    <button class="flex items-center p-2 text-sm text-secondary bg-secondary-foreground rounded hover:bg-secondary/80">
+      <span class="mr-2">👁️</span> Historique
+    </button>
+    <div class="ml-auto">
+      <span class="text-muted-foreground">Taxes</span>
+      <div class="flex items-center">
+        <label class="flex items-center mr-4">
+          <input type="checkbox" class="form-checkbox" /> TVA(19.25%)
+        </label>
+        <label class="flex items-center">
+          <input type="checkbox" class="form-checkbox" /> IR(-2.2%)
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 gap-4 mt-4">
+    <div>
+      <label class="block text-sm text-muted-foreground">Type de document</label>
+      <select class="w-full p-2 border border-border rounded">
+        <option>Select a state</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm text-muted-foreground">Client</label>
+      <select class="w-full p-2 border border-border rounded">
+        <option>Select a state</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm text-muted-foreground">Caisse</label>
+      <select class="w-full p-2 border border-border rounded">
+        <option> Mme Sandrine ---> CAISSE COMPUTER</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm text-muted-foreground">Délai Règlement jour(s)</label>
+      <input type="number" class="w-full p-2 border border-border rounded" value="45" />
+    </div>
+    <div>
+      <label class="block text-sm text-muted-foreground">Dépot</label>
+      <select class="w-full p-2 border border-border rounded">
+        <option>DEPOT AVARIE</option>
+      </select>
+    </div>
+    <div>
+      <label class="block text-sm text-muted-foreground">Commercial / Vendeur</label>
+      <select class="w-full p-2 border border-border rounded">
+        <option>ZANGUIM Leonel</option>
+      </select>
+    </div>
+    <div class="col-span-2">
+      <label class="block text-sm text-muted-foreground">Document</label>
+      <input type="text" class="w-full p-2 border border-border rounded" value="RC-DOCUMENT-TRC-2487MAEEGHKI-06-08-2024" />
+    </div>
+    <div>
+      <label class="block text-sm text-muted-foreground">Article</label>
+      <select class="w-full p-2 border border-border rounded">
+        <option>Select an option</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="mt-6">
+    <button class="bg-primary text-primary-foreground p-2 rounded-lg hover:bg-primary/80">OK</button>
+  </div>
+</div>

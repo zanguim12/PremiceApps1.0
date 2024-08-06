@@ -1,1 +1,70 @@
-<p>reglement-ticket works!</p>
+<div class="p-6 bg-card text-foreground rounded-lg shadow-md">
+  <p class="text-2xl font-bold mb-4">REGLEMENT TICKET</p>
+  <p class="text-muted-foreground mb-6">Utilise les paramètres suivants pour faire un règlement ticket</p>
+
+  <div class="flex items-center mb-4">
+    <button class="bg-secondary text-secondary-foreground rounded-full p-2 mr-2">
+      <span class="material-icons">visibility</span>
+    </button>
+    <span class="text-lg">Historique</span>
+  </div>
+
+  <hr class="border-muted mb-6" />
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div>
+      <label class="block text-sm font-medium text-muted-foreground">Type de document</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Select a state</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-muted-foreground">Client</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Select a state</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-muted-foreground">Depot</label>
+      <input type="text" value="DEPOT AVARIE" class="mt-1 block w-full border border-border rounded-md p-2" readonly />
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-muted-foreground">Caisse</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option> Mme Sandrine ----> CAISSE COMPUTER</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-muted-foreground">Commercial / Vendeur</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>ZANGUIM Leonel</option>
+      </select>
+    </div>
+
+    <div>
+      <label class="block text-sm font-medium text-muted-foreground">Article</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Select an option</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="flex items-center mt-6">
+    <label class="flex items-center">
+      <input type="checkbox" class="mr-2" />
+      <span class="text-muted-foreground">TVA(19.25%)</span>
+    </label>
+    <label class="flex items-center ml-4">
+      <input type="checkbox" class="mr-2" />
+      <span class="text-muted-foreground">IR(-2.2%)</span>
+    </label>
+  </div>
+
+  <div class="mt-6">
+    <button class="bg-primary text-primary-foreground rounded-md p-2">OK</button>
+  </div>
+</div>

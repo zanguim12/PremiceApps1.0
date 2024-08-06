@@ -1,179 +1,68 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-		<script src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js" defer init></script>
-		<script type="text/javascript">
-			window.tailwind.config = {
-				darkMode: ['class'],
-				theme: {
-					extend: {
-						colors: {
-							border: 'hsl(var(--border))',
-							input: 'hsl(var(--input))',
-							ring: 'hsl(var(--ring))',
-							background: 'hsl(var(--background))',
-							foreground: 'hsl(var(--foreground))',
-							primary: {
-								DEFAULT: 'hsl(var(--primary))',
-								foreground: 'hsl(var(--primary-foreground))'
-							},
-							secondary: {
-								DEFAULT: 'hsl(var(--secondary))',
-								foreground: 'hsl(var(--secondary-foreground))'
-							},
-							destructive: {
-								DEFAULT: 'hsl(var(--destructive))',
-								foreground: 'hsl(var(--destructive-foreground))'
-							},
-							muted: {
-								DEFAULT: 'hsl(var(--muted))',
-								foreground: 'hsl(var(--muted-foreground))'
-							},
-							accent: {
-								DEFAULT: 'hsl(var(--accent))',
-								foreground: 'hsl(var(--accent-foreground))'
-							},
-							popover: {
-								DEFAULT: 'hsl(var(--popover))',
-								foreground: 'hsl(var(--popover-foreground))'
-							},
-							card: {
-								DEFAULT: 'hsl(var(--card))',
-								foreground: 'hsl(var(--card-foreground))'
-							},
-						},
-					}
-				}
-			}
-		</script>
-		<style type="text/tailwindcss">
-			@layer base {
-				:root {
-					--background: 0 0% 100%;
---foreground: 240 10% 3.9%;
---card: 0 0% 100%;
---card-foreground: 240 10% 3.9%;
---popover: 0 0% 100%;
---popover-foreground: 240 10% 3.9%;
---primary: 240 5.9% 10%;
---primary-foreground: 0 0% 98%;
---secondary: 240 4.8% 95.9%;
---secondary-foreground: 240 5.9% 10%;
---muted: 240 4.8% 95.9%;
---muted-foreground: 240 3.8% 46.1%;
---accent: 240 4.8% 95.9%;
---accent-foreground: 240 5.9% 10%;
---destructive: 0 84.2% 60.2%;
---destructive-foreground: 0 0% 98%;
---border: 240 5.9% 90%;
---input: 240 5.9% 90%;
---ring: 240 5.9% 10%;
---radius: 0.5rem;
-				}
-				.dark {
-					--background: 240 10% 3.9%;
---foreground: 0 0% 98%;
---card: 240 10% 3.9%;
---card-foreground: 0 0% 98%;
---popover: 240 10% 3.9%;
---popover-foreground: 0 0% 98%;
---primary: 0 0% 98%;
---primary-foreground: 240 5.9% 10%;
---secondary: 240 3.7% 15.9%;
---secondary-foreground: 0 0% 98%;
---muted: 240 3.7% 15.9%;
---muted-foreground: 240 5% 64.9%;
---accent: 240 3.7% 15.9%;
---accent-foreground: 0 0% 98%;
---destructive: 0 62.8% 30.6%;
---destructive-foreground: 0 0% 98%;
---border: 240 3.7% 15.9%;
---input: 240 3.7% 15.9%;
---ring: 240 4.9% 83.9%;
-				}
-			}
-		</style>
-  </head>
-  <body>
-    <div class="p-6 bg-background rounded-lg shadow-md">
-    <h2 class="text-xl font-semibold mb-4">Faire les transferts et réception de transfert de stock</h2>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+<div class="p-6 bg-background rounded-lg shadow-md">
+  <p class="text-xl font-semibold mb-4">Faire les transferts et réception de transfert de stock</p>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
     <div>
-        <label for="document-type" class="block text-sm font-medium text-muted-foreground">Type Document</label>
-        <select id="document-type" class="mt-1 block w-full border border-border rounded-md p-2">
-            <option>Select a state</option>
-
-        </select>
+      <label for="document-type" class="block text-sm font-medium text-muted-foreground">Type Document</label>
+      <select id="document-type" class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Select a state</option>
+      </select>
     </div>
-
     <div>
-        <label for="initiator-depot" class="block text-sm font-medium text-muted-foreground">Dépôt initiateur</label>
-        <select id="initiator-depot" class="mt-1 block w-full border border-border rounded-md p-2">
-            <option>218PA9HFTIEV / DEPOT AVARIE</option>
-
-        </select>
+      <label for="initiator-depot" class="block text-sm font-medium text-muted-foreground">Dépôt initiateur</label>
+      <select id="initiator-depot" class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>218PA9HFTIEV / DEPOT AVARIE</option>
+      </select>
     </div>
-
     <div>
-        <label for="reason" class="block text-sm font-medium text-muted-foreground">Motif</label>
-        <input type="text" id="reason" class="mt-1 block w-full border border-border rounded-md p-2" placeholder="motif">
+      <label for="reason" class="block text-sm font-medium text-muted-foreground">Motif</label>
+      <input type="text" id="reason" class="mt-1 block w-full border border-border rounded-md p-2" placeholder="motif">
     </div>
-
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
     <div>
-        <label for="receiver-depot" class="block text-sm font-medium text-muted-foreground">Dépôt recepteur</label>
-        <select id="receiver-depot" class="mt-1 block w-full border border-border rounded-md p-2">
-            <option>218PA9HFTIEV / DEPOT AVARIE</option>
-
-        </select>
+      <label for="receiver-depot" class="block text-sm font-medium text-muted-foreground">Dépôt recepteur</label>
+      <select id="receiver-depot" class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>218PA9HFTIEV / DEPOT AVARIE</option>
+      </select>
     </div>
-
     <div>
-        <label for="document-add" class="block text-sm font-medium text-muted-foreground">Ajouter l'article dans un document</label>
-        <input type="text" id="document-add" class="mt-1 block w-full border border-border rounded-md p-2" placeholder="DOC24MHLUJH / DOCUMENT24AJMRET03R02-08-2024">
+      <label for="document-add" class="block text-sm font-medium text-muted-foreground">Ajouter l'article dans un document</label>
+      <input type="text" id="document-add" class="mt-1 block w-full border border-border rounded-md p-2" placeholder="DOC24MHLUJH / DOCUMENT24AJMRET03R02-08-2024">
     </div>
-
     <div>
-        <label for="item-selection" class="block text-sm font-medium text-muted-foreground">choisir l'article</label>
-        <select id="item-selection" class="mt-1 block w-full border border-border rounded-md p-2">
-            <option>Select an option</option>
-
-        </select>
+      <label for="item-selection" class="block text-sm font-medium text-muted-foreground">Choisir l'article</label>
+      <select id="item-selection" class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Select an option</option>
+      </select>
     </div>
-
+  </div>
+  <div class="grid grid-cols-1 gap-4 mb-4">
     <div class="col-span-2">
-        <label for="explanation" class="block text-sm font-medium text-muted-foreground">Raison</label>
-        <textarea id="explanation" class="mt-1 block w-full border border-border rounded-md p-2" placeholder="expliquez la raison ici"></textarea>
+      <label for="explanation" class="block text-sm font-medium text-muted-foreground">Raison</label>
+      <textarea id="explanation" class="mt-1 block w-full border border-border rounded-md p-2" placeholder="Expliquez la raison ici"></textarea>
     </div>
-
     <div class="col-span-2">
-        <button class="bg-primary text-primary-foreground p-2 rounded-md">OK</button>
+      <button class="bg-primary text-primary-foreground p-2 rounded-md">OK</button>
     </div>
-</div>
-
-<h3 class="text-lg font-semibold mb-2">Les Transferts</h3>
-<table class="min-w-full border border-border">
+  </div>
+  <p class="text-lg font-semibold mb-2">Les Transferts</p>
+  <table class="min-w-full border border-border">
     <thead>
-        <tr class="bg-muted">
-            <th class="border border-border p-2">Code à bar</th>
-            <th class="border border-border p-2">Nom</th>
-            <th class="border border-border p-2">Référence</th>
-            <th class="border border-border p-2">Quantité</th>
-            <th class="border border-border p-2">Users</th>
-            <th class="border border-border p-2">Date création</th>
-            <th class="border border-border p-2">Dernière Modification</th>
-        </tr>
+      <tr class="bg-muted">
+        <th class="border border-border p-2">Code à bar</th>
+        <th class="border border-border p-2">Nom</th>
+        <th class="border border-border p-2">Référence</th>
+        <th class="border border-border p-2">Quantité</th>
+        <th class="border border-border p-2">Users</th>
+        <th class="border border-border p-2">Date création</th>
+        <th class="border border-border p-2">Dernière Modification</th>
+      </tr>
     </thead>
     <tbody>
-
     </tbody>
-</table>
-
-<div class="mt-4">
-    <button class="bg-secondary text-secondary-foreground p-2 rounded-md">Transferts en attente</button>
-    <button class="bg-secondary text-secondary-foreground p-2 rounded-md">Transferts Receptionnés</button>
+  </table>
+  <div class="mt-4 mb-4">
+    <button class="bg-secondary border text-secondary-foreground p-2 rounded-md">Transferts en attente</button>
+    <button class="bg-secondary border text-secondary-foreground p-2 rounded-md">Transferts Receptionnés</button>
+  </div>
 </div>
-</div>
-  </body>
-</html>
