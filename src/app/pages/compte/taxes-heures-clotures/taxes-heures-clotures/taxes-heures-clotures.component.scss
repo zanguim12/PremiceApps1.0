@@ -1,0 +1,41 @@
+@import 'tailwindcss/utilities';
+
+// Background color for the card
+.bg-background {
+  @apply bg-gray-100;
+}
+
+// Background color for the card items
+.bg-card {
+  @apply bg-white;
+}
+
+// Border color for the inputs
+.border-border {
+  @apply border-gray-300;
+}
+
+// Text color for muted foreground
+.text-muted-foreground {
+  @apply text-gray-600;
+}
+
+// Text color for primary buttons
+.text-primary {
+  @apply text-blue-600;
+}
+
+// Hover effect for primary buttons
+.text-primary:hover {
+  @apply text-blue-400;
+}
+
+// Custom class for button
+button {
+  @apply transition-colors duration-200 ease-in-out;
+}
+
+// // Custom utility to set icons dynamically
+// .getFlagIcon(icon: string) {
+//   return `https://openui.fly.dev/openui/24x24.svg?text=${icon}`;
+// }

@@ -1,1 +1,61 @@
-<p>ratachement-banque works!</p>
+<div class="p-6 bg-card rounded-lg shadow-md">
+  <span class="text-lg font-semibold text-foreground">Rattacher une facture ou un cheque </span>
+  <p class="text-muted-foreground">Utilisez les paramètres suivants pour rattacher</p>
+  <div class="mt-4 space-y-4">
+    <div class="flex flex-col space-y-2">
+      <label class="text-muted-foreground">Client</label>
+      <p-dropdown
+        [options]="invoices"
+        optionLabel="label"
+        placeholder="Sélectionnez une facture"
+        class="w-full border border-border rounded-md p-2"
+      ></p-dropdown>
+    </div>
+    <div class="flex flex-col space-y-2">
+      <label class="text-muted-foreground">Facture</label>
+      <p-dropdown
+        [options]="invoices"
+        optionLabel="label"
+        placeholder="Sélectionnez une facture"
+        class="w-full border border-border rounded-md p-2"
+      ></p-dropdown>
+    </div>
+  </div>
+  <button class="mt-4 bg-primary text-primary-foreground hover:bg-primary/80 px-4 py-2 rounded-md">OK</button>
+</div>
+<p-card>
+  <div class="container mx-auto p-4">
+    <div class="grid grid-cols-1">
+      <p class="text-2xl font-bold mb-4">Historique Facture Rattaché</p>
+    </div>
+    <input type="text" placeholder="Saisir le nom du client ici..." class="border border-zinc-300 rounded-lg p-2 mb-4 w-full" />
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-zinc-300">
+        <thead>
+          <tr class="bg-zinc-100">
+            <th class="py-2 px-4 border-b">Client</th>
+            <th class="py-2 px-4 border-b">Caisse</th>
+            <th class="py-2 px-4 border-b">Détails</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="py-2 px-4 border-b">1 câble informatique</td>
+            <td class="py-2 px-4 border-b">CAISSE COMPUTER</td>
+            <td class="py-2 px-4 border-b text-purple-600 cursor-pointer">+</td>
+          </tr>
+          <!-- Ajoutez d'autres lignes ici -->
+        </tbody>
+      </table>
+    </div>
+    <div class="flex justify-between items-center mt-4">
+      <span class="text-zinc-600">1 - 10 sur 20</span>
+      <div class="flex space-x-2">
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">1</button>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">2</button>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">»</button>
+        <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 px-4 py-2 rounded">Last</button>
+      </div>
+    </div>
+  </div>
+</p-card>

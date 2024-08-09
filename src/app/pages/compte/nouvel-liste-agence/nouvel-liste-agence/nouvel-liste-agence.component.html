@@ -1,0 +1,23 @@
+<div class="p-6 bg-background rounded-lg shadow-md">
+  <h1 class="text-2xl font-bold text-foreground">Gestion des agences</h1>
+  <button class="mt-4 bg-primary text-primary-foreground p-2 rounded-lg">Nouvel Agence</button>
+  <div class="mt-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="flex items-center justify-between p-4 bg-card rounded-lg shadow" *ngFor="let agence of agences">
+      <div class="flex items-center">
+        <img aria-hidden="true" alt="Agency Logo" [src]="agence.logoUrl" class="w-10 h-10 mr-3" />
+        <div>
+          <h2 class="font-semibold text-foreground">{{ agence.name }}</h2>
+          <p class="text-muted-foreground">{{ agence.code }}</p>
+        </div>
+      </div>
+      <div class="flex space-x-2">
+        <button class="text-blue-500 hover:text-blue-700" (click)="editAgence(agence)">
+          <img aria-hidden="true" alt="Edit Icon" src="https://openui.fly.dev/openui/24x24.svg?text=✏️" />
+        </button>
+        <button class="text-blue-500 hover:text-blue-700" (click)="viewAgence(agence)">
+          <img aria-hidden="true" alt="View Icon" src="https://openui.fly.dev/openui/24x24.svg?text=👁️" />
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

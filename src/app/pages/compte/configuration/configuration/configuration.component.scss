@@ -1,0 +1,51 @@
+// Add any additional custom styles here
+
+// Example Tailwind CSS customizations
+
+.toggle {
+  @apply transform scale-125;
+}
+
+.bg-card {
+  @apply bg-gray-50;
+}
+
+.text-muted-foreground {
+  @apply text-gray-600;
+}
+
+.text-foreground {
+  @apply text-gray-900;
+}
+
+.bg-primary {
+  @apply bg-blue-600;
+}
+
+.text-primary-foreground {
+  @apply text-white;
+}
+
+.bg-secondary {
+  @apply bg-gray-500;
+}
+
+.text-secondary-foreground {
+  @apply text-white;
+}
+
+.bg-accent {
+  @apply bg-green-500;
+}
+
+.text-accent-foreground {
+  @apply text-white;
+}
+
+.border-border {
+  @apply border-gray-300;
+}
+
+.pInputText, .pButton {
+  @apply shadow-sm;
+}

@@ -20,6 +20,16 @@ export const routes: Routes = [
   path: 'composantes',
   loadChildren: () => import('./pages/composantes/composantes.module').then(m => m.ComposantesModule) // Charger le module Composantes
 },
+{
+  path: 'autres',
+  loadChildren: () => import('./pages/autres/autres.module').then(m => m.AutresModule) // Charger le module Composantes
+},
+
+{
+  path: 'compte',
+  loadChildren: () => import('./pages/compte/compte.module').then(m => m.CompteModule) // Charger le module Composantes
+},
+
  { path: '**', redirectTo: 'menus' }
 
 ];

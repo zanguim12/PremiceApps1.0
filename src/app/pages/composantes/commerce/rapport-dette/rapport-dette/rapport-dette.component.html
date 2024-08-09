@@ -1,1 +1,36 @@
-<p>rapport-dette works!</p>
+<div class="p-6 bg-card rounded-lg shadow-md">
+  <span class="text-2xl font-bold text-foreground">Rapport des dettes</span>
+  <p class="text-muted-foreground">Utilise les paramètres suivants pour voir et imprimer le rapport des dettes</p>
+
+  <div class="mt-4">
+      <span class="text-lg font-semibold text-primary">Total dettes jusqu’au mercredi 07 août 2024, 14:10:</span>
+      <p class="text-3xl font-bold text-purple-600">116 852 235.29</p>
+  </div>
+
+  <div class="mt-6 border-t border-border pt-4">
+      <div class="flex flex-col sm:flex-row items-center justify-between">
+          <label for="start-date" class="text-muted-foreground">PÉRIODE</label>
+          <div class="flex items-center mt-2 sm:mt-0">
+              <input type="text" id="start-date" placeholder="debut" class="border border-border rounded-lg p-2 mr-2" />
+              <span class="text-muted-foreground">...</span>
+              <input type="text" id="end-date" placeholder="fin" class="border border-border rounded-lg p-2 ml-2" />
+          </div>
+      </div>
+
+      <div class="mt-4">
+          <label for="client" class="text-muted-foreground">Client</label>
+          <select id="client" class="border border-border rounded-lg p-2 w-full mt-1">
+              <option>Select a client</option>
+              <!-- Add options here -->
+          </select>
+      </div>
+
+      <div class="mt-4 flex flex-col sm:flex-row justify-between">
+          <label for="period" class="text-muted-foreground">Période</label>
+          <div class="flex mt-2 sm:mt-0">
+              <button class="bg-secondary text-secondary-foreground hover:bg-secondary/80 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary">Voir</button>
+              <button class="bg-yellow-500 text-black hover:bg-yellow-400 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary ml-2">OK</button>
+          </div>
+      </div>
+  </div>
+</div>

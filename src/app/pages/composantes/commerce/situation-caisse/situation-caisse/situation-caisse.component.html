@@ -1,1 +1,44 @@
-<p>situation-caisse works!</p>
+<div class="p-6 bg-background text-foreground">
+  <span class="text-2xl font-bold mb-4">Situation De Caisse</span>
+  <p class="mb-6">Utilise les paramètres suivants pour voir et imprimer une situation de caisse</p>
+
+  <div class="mb-4">
+    <label class="block mb-2">Caisse</label>
+    <input type="text" value="CAISSE COMPUTER" class="border border-border rounded p-2 w-full" readonly />
+  </div>
+
+  <div class="flex space-x-4 mb-4">
+    <div class="flex-1">
+      <label class="block mb-2">Période</label>
+      <select class="border border-border rounded p-2 w-full">
+        <option value="">Sélectionner une période</option>
+        <option *ngFor="let period of periods">{{ period }}</option>
+      </select>
+    </div>
+    <button class="bg-primary text-primary-foreground rounded p-2">Voir</button>
+    <button class="bg-secondary text-secondary-foreground rounded p-2">Print</button>
+  </div>
+
+  <p-table [value]="data" class="min-w-full border-collapse border border-border">
+    <ng-template pTemplate="header">
+      <tr>
+        <th class="border border-border p-2">Date</th>
+        <th class="border border-border p-2">Numero</th>
+        <th class="border border-border p-2">Client</th>
+        <th class="border border-border p-2">Libelle</th>
+        <th class="border border-border p-2">Débit</th>
+        <th class="border border-border p-2">Credit</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData>
+      <tr>
+        <td class="border border-border p-2">{{ rowData.date }}</td>
+        <td class="border border-border p-2">{{ rowData.numero }}</td>
+        <td class="border border-border p-2">{{ rowData.client }}</td>
+        <td class="border border-border p-2">{{ rowData.libelle }}</td>
+        <td class="border border-border p-2">{{ rowData.debit }}</td>
+        <td class="border border-border p-2">{{ rowData.credit }}</td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

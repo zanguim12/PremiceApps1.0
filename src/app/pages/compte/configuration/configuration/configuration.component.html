@@ -1,0 +1,93 @@
+<div class="p-6 bg-card rounded-lg shadow-md">
+  <h2 class="text-lg font-semibold text-foreground">Configurations</h2>
+  <div class="mt-4">
+    <p class="text-muted-foreground">Ce que l'on verra sur la facture</p>
+
+    <div class="flex items-center justify-between mt-4">
+      <span class="text-muted-foreground">Logo uniquement</span>
+      <p-checkbox binary="true" [(ngModel)]="logoOnly" class="toggle"></p-checkbox>
+    </div>
+
+    <div class="flex items-center justify-between mt-4">
+      <span class="text-muted-foreground">Le Pied uniquement</span>
+      <p-checkbox binary="true" [(ngModel)]="footerOnly" class="toggle"></p-checkbox>
+    </div>
+
+    <div class="flex items-center justify-between mt-4">
+      <span class="text-muted-foreground">Rien du tout</span>
+      <p-checkbox binary="true" [(ngModel)]="nothingAtAll" class="toggle"></p-checkbox>
+    </div>
+
+    <div class="flex items-center justify-between mt-4">
+      <span class="text-muted-foreground">L'entête uniquement</span>
+      <p-checkbox binary="true" [(ngModel)]="headerOnly" class="toggle"></p-checkbox>
+    </div>
+
+    <div class="flex items-center justify-between mt-4">
+      <span class="text-muted-foreground">Entête & Pied</span>
+      <p-checkbox binary="true" [(ngModel)]="headerAndFooter" class="toggle" checked="true"></p-checkbox>
+    </div>
+  </div>
+
+  <div class="p-6 bg-card rounded-lg shadow-md mt-6">
+    <div class="mb-6">
+      <label for="slogan" class="block text-muted-foreground mb-2">Quel est le slogan de votre entreprise?</label>
+      <input pInputText [(ngModel)]="slogan" id="slogan" class="border border-border rounded-lg p-2 w-full" placeholder="vous servir est notre priorité" />
+    </div>
+
+    <div class="mb-6">
+      <label class="block text-muted-foreground mb-2">Compte(s) dans le(s) quel(s) les clients peuvent payé (banque, mobile...)</label>
+
+      <div class="mb-4">
+        <label for="structure" class="block text-muted-foreground mb-1">Nom de la structure (mtn money, uba...)</label>
+        <input pInputText [(ngModel)]="structureName" id="structure" class="border border-border rounded-lg p-2 w-full" placeholder="l'intitulé de la structure" />
+      </div>
+
+      <div class="flex items-center mb-4">
+        <label for="account-number" class="block text-muted-foreground mr-2">Numéro de compte</label>
+        <input pInputText [(ngModel)]="accountNumber" id="account-number" class="border border-border rounded-lg p-2 flex-1" placeholder="numéro de compte" />
+        <button pButton type="button" icon="pi pi-plus" label="" class="ml-2 bg-primary text-primary-foreground rounded-lg p-2"></button>
+      </div>
+    </div>
+
+    <button pButton type="button" (click)="saveDetails()" label="ENREGISTRER" class="bg-accent text-accent-foreground rounded-lg p-2 w-full"></button>
+  </div>
+
+  <div class="p-4 space-y-4">
+    <div class="flex items-center justify-between p-4 border border-border rounded-lg">
+      <div class="flex items-center">
+        <img aria-hidden="true" alt="logo-placeholder" src="https://openui.fly.dev/openui/100x100.svg?text=Logo" class="mr-3" />
+        <span class="font-bold text-lg">Ajouter Le Logo</span>
+      </div>
+      <button pButton type="button" label="Enregistrer Logo" class="bg-primary text-primary-foreground px-4 py-2 rounded"></button>
+    </div>
+
+    <div class="flex items-center justify-between p-4 border border-border rounded-lg">
+      <div class="flex items-center">
+        <img aria-hidden="true" alt="header-paper-placeholder" src="https://openui.fly.dev/openui/100x100.svg?text=Header" class="mr-3" />
+        <span class="font-bold text-lg">Ajouter Le Papier entête (haut de page)</span>
+      </div>
+      <button pButton type="button" label="Enregistrer Entête" class="bg-primary text-primary-foreground px-4 py-2 rounded"></button>
+    </div>
+
+    <div class="flex items-center justify-between p-4 border border-border rounded-lg">
+      <div class="flex items-center">
+        <img aria-hidden="true" alt="footer-paper-placeholder" src="https://openui.fly.dev/openui/100x100.svg?text=Footer" class="mr-3" />
+        <span class="font-bold text-lg">Ajouter Le Papier entête (bas de page)</span>
+      </div>
+      <button pButton type="button" label="Enregistrer Pied" class="bg-primary text-primary-foreground px-4 py-2 rounded"></button>
+    </div>
+
+    <div class="flex items-center justify-between p-4 border border-border rounded-lg">
+      <div class="flex items-center">
+        <img aria-hidden="true" alt="loyalty-card-placeholder" src="https://openui.fly.dev/openui/100x100.svg?text=Carte" class="mr-3" />
+        <span class="font-bold text-lg">Arrière, Carte Fidélité</span>
+      </div>
+      <button pButton type="button" label="Enregistrer Carte Fidel" class="bg-primary text-primary-foreground px-4 py-2 rounded"></button>
+    </div>
+
+    <div class="mt-6 text-center">
+      <button pButton type="button" label="Voir" class="bg-secondary text-secondary-foreground px-4 py-2 rounded"></button>
+    </div>
+  </div>
+</div>

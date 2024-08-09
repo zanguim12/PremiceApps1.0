@@ -1,0 +1,29 @@
+<div class="p-6 bg-card rounded-lg shadow-md">
+  <h2 class="text-lg font-semibold text-foreground">Configuration des messages</h2>
+
+  <div class="mt-4">
+    <label for="messageCount" class="block text-sm text-muted-foreground">Nombre Message</label>
+    <input id="messageCount" pInputText type="text" placeholder="Nb: seul la dernière config pour une entreprise est pris en compte" class="mt-1 p-2 border border-border rounded-md w-full" />
+  </div>
+
+  <div class="mt-6 overflow-x-auto">
+    <p-table [value]="messageConfigs" class="min-w-full divide-y divide-border">
+      <ng-template pTemplate="header">
+        <tr class="bg-muted">
+          <th class="px-4 py-2 text-left text-sm font-medium text-muted-foreground">Entreprise</th>
+          <th class="px-4 py-2 text-left text-sm font-medium text-muted-foreground">Nombre Message</th>
+          <th class="px-4 py-2 text-left text-sm font-medium text-muted-foreground">Creer Par</th>
+          <th class="px-4 py-2 text-left text-sm font-medium text-muted-foreground">Date</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-config>
+        <tr class="bg-card divide-y divide-border">
+          <td class="px-4 py-2 text-sm text-foreground">{{ config.entreprise }}</td>
+          <td class="px-4 py-2 text-sm text-foreground">{{ config.nombreMessage }}</td>
+          <td class="px-4 py-2 text-sm text-foreground">{{ config.creerPar }}</td>
+          <td class="px-4 py-2 text-sm text-foreground">{{ config.date }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>

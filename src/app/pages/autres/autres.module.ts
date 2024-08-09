@@ -9,6 +9,9 @@ import { AutresRoutingModule } from './autres-routing.module';
   imports: [
     CommonModule,
     AutresRoutingModule
+  ],
+  exports: [
+    AutresRoutingModule,
   ]
 })
 export class AutresModule { }

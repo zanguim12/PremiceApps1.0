@@ -1,1 +1,36 @@
-<p>bon-retour works!</p>
+<div class="p-6 bg-background rounded-lg shadow-md">
+  <span class="text-lg font-semibold text-foreground">BON RETOUR</span>
+  <p class="text-muted-foreground">utilise les paramètres suivants pour faire un bon de retour</p>
+  <div class="flex items-center mt-4">
+    <button class="bg-secondary text-secondary-foreground p-2 rounded-md flex items-center">
+      <span class="material-icons">visibility</span> Historique
+    </button>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2">
+    <div class="mt-4">
+      <label class="block text-muted-foreground">Type de document</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Select a state</option>
+      </select>
+    </div>
+    <div class="mt-4">
+      <label class="block text-muted-foreground">Commercial / Vendeur</label>
+      <input type="text" value="ZANGUIM Leonel" class="mt-1 block w-full border border-border rounded-md p-2" readonly />
+    </div>
+    <div class="mt-4">
+      <label class="block text-muted-foreground">Document</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>BR-DOCUMENT-TBR-249L8WIUJ5JZ-07-08-2024</option>
+      </select>
+    </div>
+    <div class="mt-4">
+      <label class="block text-muted-foreground">Facture</label>
+      <select class="mt-1 block w-full border border-border rounded-md p-2">
+        <option>Select a state</option>
+      </select>
+    </div>
+    <div class="mt-6">
+      <button class="bg-primary text-primary-foreground p-2 rounded-md">OK</button>
+    </div>
+  </div>
+</div>

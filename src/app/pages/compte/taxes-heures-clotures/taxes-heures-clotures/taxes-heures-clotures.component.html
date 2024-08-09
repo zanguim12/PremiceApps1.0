@@ -1,0 +1,21 @@
+<div class="p-6 bg-background rounded-lg shadow-md">
+  <h2 class="text-lg font-semibold mb-4">GESTION DES TAXES ET HEURE DE CLOTURE DE FACTURE</h2>
+
+  <div class="flex justify-between items-center mb-4">
+    <button class="bg-secondary text-secondary-foreground px-4 py-2 rounded-md">+ TAXE</button>
+    <input type="time" class="border border-border rounded-md p-2" aria-label="Choose closing time">
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="bg-card p-4 rounded-lg flex items-center justify-between" *ngFor="let tax of taxes">
+      <div class="flex items-center">
+        <!-- <img [src]="getFlagIcon(tax.icon)" alt="{{tax.name}}" class="w-8 h-8 mr-2" /> -->
+        <span class="font-medium">{{ tax.name }}</span>
+      </div>
+      <span class="text-muted-foreground">{{ tax.code }}</span>
+      <button class="text-primary hover:text-primary/80">
+        <img src="https://openui.fly.dev/openui/24x24.svg?text=👁️" alt="View" class="w-6 h-6" />
+      </button>
+    </div>
+  </div>
+</div>

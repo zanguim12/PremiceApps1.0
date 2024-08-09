@@ -1,0 +1,38 @@
+<div class="p-6 bg-background rounded-lg shadow-md">
+  <p class="text-2xl font-bold mb-4">Gestion Des Clients</p>
+  <div class="mb-4">
+    <button class="bg-primary text-primary-foreground border px-4 py-2 rounded">Nouveau Client</button>
+  </div>
+  <div class="mb-4">
+    <p>1: saisit ici le nom du client ou scan son code à barres pour l'afficher</p>
+    <p>2: saisit le nom d'employé pour voir la liste de ses clients</p>
+    <input type="text" placeholder="saisir ici..." class="border border-border rounded p-2 w-full" />
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- Card Components -->
+    <div class="bg-card p-4 rounded-lg shadow" *ngFor="let client of clients">
+      <div class="flex items-center justify-between">
+        <div>
+          <p class="font-semibold">{{ client.name }}</p>
+          <p class="text-muted-foreground">{{ client.code }}</p>
+        </div>
+        <div class="flex space-x-2">
+          <button class="bg-secondary text-secondary-foreground p-2 rounded">
+            <img aria-hidden="true" alt="edit" src="https://openui.fly.dev/openui/24x24.svg?text=✏️" />
+          </button>
+          <button class="bg-secondary text-secondary-foreground p-2 rounded">
+            <img aria-hidden="true" alt="view" src="https://openui.fly.dev/openui/24x24.svg?text=👁️" />
+          </button>
+          <button class="bg-secondary text-secondary-foreground p-2 rounded">
+            <img aria-hidden="true" alt="transfer" src="https://openui.fly.dev/openui/24x24.svg?text=🔄" />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="flex justify-between mt-4">
+    <button class="bg-primary text-primary-foreground px-4 py-2 rounded">1</button>
+    <button class="bg-primary text-primary-foreground px-4 py-2 rounded">2</button>
+    <button class="bg-primary text-primary-foreground px-4 py-2 rounded">›</button>
+  </div>
+</div>

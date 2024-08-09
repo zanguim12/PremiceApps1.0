@@ -111,17 +111,65 @@ export class Menu {
           icon: 'assets/icons/heroicons/outline/cog.svg',
           label: 'clients',
           route: '/clients',
+          children: [
+            {
+              label: 'Nouveau Client',
+              route: '/autres/nouveau-client'
+            }
+          ]
         },
       ],
     },
     {
       group: 'Configuration',
-      separator: false,
+      separator: true,
       items: [
         {
           icon: 'assets/icons/heroicons/outline/cog.svg',
-          label: 'Settings',
-          route: '/settings',
+          label: 'Compte',
+          route: '/compte',
+          children:[
+            {
+              label: 'Configuration',
+              route: '/compte/configuration'
+            },
+            {
+              label: 'Configuration Messages',
+              route: '/compte/configuration-messages'
+            },
+            {
+              label: 'Nouvel/List Agence',
+              route: '/compte/nouvel-liste-agence'
+            },
+            {
+              label: 'Nouvel/List Service',
+              route: '/compte/nouvel-liste-service'
+            },
+            {
+              label: 'Type/Liste Documents',
+              route: '/compte/type-liste-documents'
+            },
+            {
+              label: 'Caisse/Liste Caisse',
+              route: '/compte/liste-caisse'
+            },
+            {
+              label: 'Taxe/Liste Taxes/Heure Cloture caisse',
+              route: '/compte/taxes-heures-clotures'
+            },
+            {
+              label: 'Point/Prix',
+              route: '/compte/point-prix'
+            },
+            {
+              label: 'Langue',
+              route: '/compte/langue'
+            },
+            {
+              label: 'Inside',
+              route: '/compte/inside'
+            },
+          ]
         },
       ],
     },
